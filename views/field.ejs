@@ -1,0 +1,33 @@
+<%- include("./partials/header.ejs") %>
+
+  <section>
+    <p>There is <%= nbIrrigatedParcels %> irrigated fields</p>
+
+    <article>
+      <% for (const row of parcels) { %>
+        <div class="row">
+          <% for (const col of row) { %>
+            <div class="col">
+              <% if (col==="O" ) { %>
+                <span class="blue">
+                  <%= col %>
+                </span>
+                <%} %>
+                  <% if (col==="C" ) { %>
+                    <span class="green">
+                      <%= col %>
+                    </span>
+                    <%} %>
+                      <% if (col==="X" ) { %>
+                        <span class="yellow">
+                          <%= col %>
+                        </span>
+                        <%} %>
+            </div>
+            <% } %>
+        </div>
+        <% } %>
+    </article>
+  </section>
+
+  <%- include("./partials/footer.ejs") %>

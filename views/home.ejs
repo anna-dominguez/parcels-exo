@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+  <section>
+    <ul>
+      <% for (const {name} of fields) { %>
+        <li><a href="/field/<%= name %>">
+            <%= name %>
+          </a>
+        </li>
+        <% } %>
+    </ul>
+  </section>
+
+  <%- include('partials/footer') %>
